@@ -1,6 +1,6 @@
 $s-breakpoint: 430px;
-$m-breakpoint: 600px;
-$l-breakpoint: 768px;
+$m-breakpoint: 768px;
+$l-breakpoint: 1200px;
 
 @mixin responsive($screen) {
     @if ($screen =='s') {

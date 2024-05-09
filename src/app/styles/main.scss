@@ -1,0 +1,59 @@
+@use '../../styles/main.scss' as *;
+
+#mainContainer {
+    width: 100vw;
+    height: 60vh;
+    max-width: calc(1200px - 2rem);
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+#MainItem {
+    width: 480px;
+}
+
+.gridSection {
+    width: 100%;
+    display: grid;
+    gap: 0.5rem;
+
+    grid-template-areas:
+        "a a a b c c"
+        "a a a g c c"
+        "a a a d d d"
+        "f f f f e e";
+
+    article {
+        border-radius: 1rem;
+        background-color: #f2f2f2;
+        display: flex;
+        padding: 1rem;
+    }
+
+    @mixin grid-item($index) {
+        .#{$index} {
+            grid-area: #{$index};
+        }
+    }
+
+    @include grid-item(a);
+    @include grid-item(b);
+    @include grid-item(c);
+    @include grid-item(d);
+    @include grid-item(e);
+    @include grid-item(f);
+    @include grid-item(g);
+}
+
+@include responsive(m) {
+    #MainItem {
+        width: 100%;
+        height: 100%;
+    }
+
+    #mainContainer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

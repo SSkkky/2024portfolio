@@ -1,13 +1,16 @@
 import Header from "./components/Header"
 import Text from "./components/Text"
 import Skill from "./components/Skill"
+import Cloud from "./components/Cloud"
+import "./styles/MainItem.scss"
 
 export default function MainItem() {
   return (
-      <article className="item item1" >
+      <article id="MainItem">
           <Header/>
           <Text/>
           <Skill/>
+          <Cloud/>
           <section className="CloudObject">
           </section>
       </article>

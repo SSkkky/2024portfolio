@@ -7,7 +7,9 @@ button,
 a,
 b,
 span,
-p {
+p,
+article,
+section {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     box-sizing: border-box;
     margin: 0;
@@ -16,8 +18,16 @@ p {
 
 ul,
 li {
+    margin: 0;
+    padding: 0;
     outline: 0;
     list-style: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
 }
 
 body {
@@ -26,4 +36,41 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    $deg : 180;
+    $deg1 : $deg + 40;
+    $deg2 : $deg1 + 40;
+    $deg3 : $deg2 + 40;
+
+    @keyframes gradientChange {
+        @for $i from 0 through 49 {
+            #{percentage($i/100)} {
+                background-image: linear-gradient(#{$deg + $i}deg, rgba(240, 248, 255, 0.8), rgba(240, 248, 255, 0) #{percentage(($i + 50)/100)}),
+                linear-gradient(#{$deg1 + $i}deg, rgba(240, 248, 255, 0.8), rgba(240, 248, 255, 0) #{percentage(($i + 50)/100)}),
+                linear-gradient(#{$deg2 + $i}deg, rgba(125, 190, 255, 0.8), rgba(125, 190, 255, 0) #{percentage(($i + 50)/100)}),
+                linear-gradient(#{$deg3 + $i}deg, rgba(60, 170, 255, 0.8), rgba(60, 170, 255, 0) #{percentage(($i + 50)/100)});
+            }
+        }
+
+        @for $i from 50 through 100 {
+            #{percentage($i/100)} {
+                background-image: linear-gradient(#{100 + $deg - $i}deg, rgba(240, 248, 255, 0.8), rgba(240, 248, 255, 0) #{percentage((150 - $i)/100)}),
+                linear-gradient(#{100 + $deg1 - $i}deg, rgba(240, 248, 255, 0.8), rgba(240, 248, 255, 0) #{percentage((150 - $i)/100)}),
+                linear-gradient(#{100 + $deg2 - $i}deg, rgba(125, 190, 255, 0.8), rgba(125, 190, 255, 0) #{percentage((150 - $i)/100)}),
+                linear-gradient(#{100 + $deg3 - $i}deg, rgba(60, 170, 255, 0.8), rgba(60, 170, 255, 0) #{percentage((150 - $i)/100)});
+            }
+        }
+    }
+
+    animation: gradientChange 5s infinite;
+}
+
+// background: linear-gradient(217deg, #f0f8ff, #b0daff 70.71%),
+//     linear-gradient(127deg, #ffd4b0, #f0f8ff 70.71%),
+//     linear-gradient(336deg, #f0f8ff, #b0daff 70.71%);
+
+@include responsive(m) {
+    body {
+        align-items: flex-start;
+    }
 }
