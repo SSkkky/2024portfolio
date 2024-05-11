@@ -63,6 +63,27 @@ body {
         }
     }
 
+
+    // @keyframes gradientChange {
+    //     @for $i from 0 through 49 {
+    //         #{percentage($i/100)} {
+    //             background-image: linear-gradient(#{$deg + $i}deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) #{percentage(($i + 50)/100)}),
+    //             linear-gradient(#{$deg1 + $i}deg, rgba(60, 60, 60, 0.8), rgba(60, 60, 60, 0) #{percentage(($i + 50)/100)}),
+    //             linear-gradient(#{$deg2 + $i}deg, rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0) #{percentage(($i + 50)/100)}),
+    //             linear-gradient(#{$deg3 + $i}deg, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0) #{percentage(($i + 50)/100)});
+    //         }
+    //     }
+
+    //     @for $i from 50 through 100 {
+    //         #{percentage($i/100)} {
+    //             background-image: linear-gradient(#{100 + $deg - $i}deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) #{percentage((150 - $i)/100)}),
+    //             linear-gradient(#{100 + $deg1 - $i}deg, rgba(60, 60, 60, 0.8), rgba(60, 60, 60, 0) #{percentage((150 - $i)/100)}),
+    //             linear-gradient(#{100 + $deg2 - $i}deg, rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0) #{percentage((150 - $i)/100)}),
+    //             linear-gradient(#{100 + $deg3 - $i}deg, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0) #{percentage((150 - $i)/100)});
+    //         }
+    //     }
+    // }
+
     animation: gradientChange 5s infinite;
 }
 
