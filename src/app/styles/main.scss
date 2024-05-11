@@ -1,8 +1,10 @@
 @use '../../styles/main.scss' as *;
 
 #mainContainer {
+    transition: 0.3s ease-in-out;
     width: 100vw;
     height: 60vh;
+    max-height: 60vh;
     max-width: calc(1200px - 2rem);
     padding: 1rem;
     display: flex;
@@ -10,6 +12,7 @@
 }
 
 #MainItem {
+    transition: 0.3s ease-in-out;
     width: 480px;
 }
 
@@ -20,9 +23,9 @@
 
     grid-template-areas:
         "a a a b c c"
-        "a a a g c c"
+        "a a a b c c"
         "a a a d d d"
-        "f f f f e e";
+        ". f f f e e";
 
     article {
         border-radius: 1rem;
@@ -53,7 +56,26 @@
     }
 
     #mainContainer {
+        height: 100%;
         flex-direction: column;
         gap: 2rem;
+    }
+
+    .gridSection {
+        height: 100%;
+        transition: 0.3s ease-in-out;
+
+        grid-template-areas:
+            "a a a b b"
+            "a a a b b"
+            "a a a c c"
+            "d d d d d"
+            "d d d d d"
+            "e e e f f"
+            "e e e f f";
+
+        article {
+            min-height: 200px;
+        }
     }
 }

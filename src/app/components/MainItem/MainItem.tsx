@@ -11,8 +11,6 @@ export default function MainItem() {
           <Text/>
           <Skill/>
           <Cloud/>
-          <section className="CloudObject">
-          </section>
       </article>
   )
 }

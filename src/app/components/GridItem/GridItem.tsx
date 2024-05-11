@@ -7,7 +7,6 @@ export default function GridItem(){
             <article className="d">해피펍</article>
             <article className="e">영화</article>
             <article className="f">스킬</article>
-            <article className="g">ㅇㅅㅇ</article>
         </section>
     )
 }
