@@ -21,7 +21,7 @@ export default function Cloud () {
     renderer.setClearColor(0xFFFFFF, 0);
 
     const aspectRatio = 1;
-    const d = 3;
+    const d = 4;
     const camera = new THREE.OrthographicCamera(-d * aspectRatio, d * aspectRatio, d, -d, -100, 1000);
     camera.position.set(0, 2, 2);
     camera.lookAt(0, 2, 2);
@@ -40,8 +40,8 @@ export default function Cloud () {
 
     let loader = new GLTFLoader();
     loader.load('/assets/gltf/cloud/cloud.gltf', function(g){
-      g.scene.scale.set(1, 1.2, 1);
-      g.scene.position.set(-6, 0, 0);
+      g.scene.scale.set(1, 1.5, 1);
+      g.scene.position.set(-7, -1, 0);
       scene.add(g.scene);
       renderer.render(scene, camera);
       function animate(){
@@ -62,7 +62,7 @@ export default function Cloud () {
 
   return (
     <aside ref={mountRef} className='mainCloudObject'>
-         <canvas id="canvas" width="600" height="600" ref={canvasRef}></canvas>
+         <canvas id="canvas" width="480" height="300" ref={canvasRef}></canvas>
     </aside>
   );
 }

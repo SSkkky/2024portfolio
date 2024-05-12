@@ -24,6 +24,7 @@
     }
 
     .skillIcons {
+        width: 400px;
         padding-right: 4rem;
         display: flex;
         flex-wrap: wrap;
@@ -40,8 +41,8 @@
     .mainCloudObject {
         transition: 0.3s ease;
         position: absolute;
-        bottom: -8rem;
-        right: -8rem;
+        bottom: 0;
+        right: -4rem;
         z-index: 1;
         overflow: hidden;
 

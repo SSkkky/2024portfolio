@@ -2,12 +2,12 @@ import Header from "./components/Header"
 import Text from "./components/Text"
 import Skill from "./components/Skill"
 import Cloud from "./components/Cloud"
-import "./styles/MainItem.scss"
+import "./styles/Intro.scss"
 
 export default function MainItem() {
   return (
-      <article id="MainItem">
-          <Header/>
+      <article id="MainItem" className="a">
+          {/* <Header/> */}
           <Text/>
           <Skill/>
           <Cloud/>

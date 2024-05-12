@@ -13,25 +13,25 @@
 
 #MainItem {
     transition: 0.3s ease-in-out;
-    width: 480px;
 }
 
 .gridSection {
-    width: 100%;
+    padding: 0 2rem;
     display: grid;
     gap: 0.5rem;
 
+
     grid-template-areas:
-        "a a a b c c"
-        "a a a b c c"
-        "a a a d d d"
-        ". f f f e e";
+        "a a b c"
+        "e f d c"
+        "g g d .";
 
     article {
         border-radius: 1rem;
         background-color: #f2f2f2;
         display: flex;
-        padding: 1rem;
+        min-width: 290px;
+        min-height: 360px;
     }
 
     @mixin grid-item($index) {
