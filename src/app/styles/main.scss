@@ -16,15 +16,38 @@
 }
 
 .gridSection {
+    transition: 0.3s ease-in-out;
     padding: 0 2rem;
     display: grid;
     gap: 0.5rem;
 
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 
-    grid-template-areas:
-        "a a b c"
-        "e f d c"
-        "g g d .";
+    $list : a, b, c, d, e, f, g;
+
+    .header {
+        grid-area: header;
+    }
+
+    &.ALL {
+        grid-template-areas:
+            "a a a b"
+            "d e c b"
+            "g g c f";
+    }
+
+    &.PERSONAL {
+        grid-template-areas:
+            "a a a b"
+            "g f d b";
+    }
+
+    &.TEAM {
+        grid-template-areas:
+            "a a a c"
+            "g e e c";
+    }
 
     article {
         border-radius: 1rem;
