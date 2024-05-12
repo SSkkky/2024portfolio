@@ -6,7 +6,7 @@ import "./styles/Intro.scss"
 
 export default function MainItem() {
   return (
-      <article id="MainItem" className="a">
+      <article id="MainItem" className="self">
           {/* <Header/> */}
           <Text/>
           <Skill/>

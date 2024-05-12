@@ -1,16 +1,20 @@
+"use client"
+
 import IntroComp from '@/app/components/MainItem/Intro';
+import { gridFilterStore } from '@/store/gridFilterStore'
 
 export default function GridItem(){
+    const {filter} = gridFilterStore();
+
     return(
-        <section className="gridSection">
+        <section className={`gridSection ` + filter}>
             <IntroComp />
-            <article className="b">나이키</article>
-            <article className="c">민초맵</article>
-            <article className="d">해피펍</article>
-            <article className="e">영화</article>
-            <article className="f">구름</article>
-            <article className="g">스킬</article>
-            <article className="h">나이키</article>
+            <article className="skill">AboutME</article>
+            <article className="nike">나이키</article>
+            <article className="happypub">해피펍</article>
+            <article className="movie">영화</article>
+            <article className="choding">초딩</article>
+            <article className="map">민초맵</article>
         </section>
     )
 }
