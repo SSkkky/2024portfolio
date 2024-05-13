@@ -36,6 +36,7 @@ export default function Cloud () {
     }
     window.addEventListener('mousemove', onMouseMove);
     const controls = new OrbitControls(camera, renderer.domElement)
+    controls.enableZoom = false;
     controls.update();
 
     let loader = new GLTFLoader();
