@@ -1,0 +1,41 @@
+#movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    position: relative;
+
+    background-position: 0 10rem;
+
+    h3 {
+        padding: 2rem;
+        transition: 0.5s ease;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #ffffff;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &::before {
+        transition: 0.5s ease;
+        content: 'SFLIX';
+        padding: 2rem;
+        font-weight: 900;
+        font-size: 2rem;
+        color: #ff0000;
+        position: absolute;
+        z-index: 0;
+        opacity: 0;
+    }
+
+    &:hover {
+        h3 {
+            backdrop-filter: blur(4px);
+        }
+
+        &::before {
+            opacity: 1;
+        }
+    }
+}

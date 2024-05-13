@@ -1,0 +1,37 @@
+#choding {
+    position: relative;
+    overflow: hidden;
+    //background-color: #2adbad;
+
+    .iphone {
+        transition: 0.5s ease-out;
+        background: url('/assets/main/choding_full.png') no-repeat;
+        background-size: cover;
+        border-radius: 2.5rem;
+        position: absolute;
+        bottom: -2rem;
+        right: -2rem;
+        rotate: 0;
+    }
+
+    &:hover {
+        .iphone {
+            bottom: 0;
+            right: 0;
+            rotate: -15deg;
+            background-position: 0 15%;
+        }
+    }
+
+    .label {
+        span {
+            margin-right: 0.5rem;
+            padding: 0.2rem 0.5rem;
+            border: 1px solid #fff;
+            border-radius: 1rem;
+            border-color: #fff;
+            color: #fff;
+            font-size: 0.8rem;
+        }
+    }
+}

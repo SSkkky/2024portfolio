@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import ButtonComp from './components/Button';
-import GitLogo from '@/assets/skills/git.png'
+import GitLogo from '@/assets/skills/Git_w.png'
 import './Header.scss';
 
 export default function Header(){

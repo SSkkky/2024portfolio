@@ -1,6 +1,13 @@
 "use client"
 
 import IntroComp from '@/app/components/MainItem/Intro';
+import AboutComp from '@/app/components/GridItem/components/About';
+import HappypubComp from '@/app/components/GridItem/components/Happypub';
+import MovieComp from '@/app/components/GridItem/components/Movie';
+import ChodingComp from '@/app/components/GridItem/components/Choding';
+import MinchomapComp from '@/app/components/GridItem/components/Minchomap';
+import NikeComp from '@/app/components/GridItem/components/nike';
+
 import { gridFilterStore } from '@/store/gridFilterStore'
 
 export default function GridItem(){
@@ -9,12 +16,12 @@ export default function GridItem(){
     return(
         <section className={`gridSection ` + filter}>
             <IntroComp />
-            <article className="skill">AboutME</article>
-            <article className="nike">나이키</article>
-            <article className="happypub">해피펍</article>
-            <article className="movie">영화</article>
-            <article className="choding">초딩</article>
-            <article className="map">민초맵</article>
+            <AboutComp/>
+            <NikeComp/>
+            <HappypubComp/>
+            <MovieComp/>
+            <ChodingComp />
+            <MinchomapComp/>
         </section>
     )
 }

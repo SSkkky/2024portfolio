@@ -27,7 +27,7 @@ export default function Cloud () {
     camera.lookAt(0, 2, 2);
     scene.add(camera);
   
-    let light = new THREE.HemisphereLight(0xffffff, 0x7fb8eb, 4);
+    let light = new THREE.HemisphereLight(0xffffff, 0x000000, 3);
     scene.add(light);
 
     const onMouseMove = (event:MouseEvent) => {
