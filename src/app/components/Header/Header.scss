@@ -14,14 +14,13 @@
     display: flex;
 
     h1 {
-        font-size: 1rem;
-        color: #ffffff;
+        font-size: 1.2rem;
     }
 
     .selectbox {
         transition: 0.3s ease;
         padding: 0.3rem;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(0, 0, 0, 0.05);
         border-radius: 1rem;
 
         display: flex;
