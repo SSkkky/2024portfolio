@@ -1,11 +1,13 @@
 @use '../../../../styles/main.scss' as *;
 
 #MainItem {
+    cursor: auto;
     transition: 0.3s ease;
-    background-color: transparent;
+    background: transparent;
     border: 0;
     flex-direction: column;
     position: relative;
+    box-shadow: none;
 
     .mainItemHeader {
         width: 100%;
@@ -18,7 +20,6 @@
     }
 
     .titleText {
-        color: #ffffff;
         transition: 0.3s ease;
         margin: 2rem 0;
         font-size: 2rem;

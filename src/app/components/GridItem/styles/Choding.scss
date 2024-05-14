@@ -1,7 +1,8 @@
 #choding {
+    transition: 0.5s ease-out;
     position: relative;
     overflow: hidden;
-    //background-color: #2adbad;
+    background-color: #fffcd8;
 
     .iphone {
         transition: 0.5s ease-out;
@@ -15,6 +16,8 @@
     }
 
     &:hover {
+        background-color: #2adbad;
+
         .iphone {
             bottom: 0;
             right: 0;
