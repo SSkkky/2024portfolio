@@ -6,7 +6,7 @@ import HappypubComp from '@/app/components/GridItem/components/Happypub';
 import MovieComp from '@/app/components/GridItem/components/Movie';
 import ChodingComp from '@/app/components/GridItem/components/Choding';
 import MinchomapComp from '@/app/components/GridItem/components/Minchomap';
-import NikeComp from '@/app/components/GridItem/components/nike';
+import NikeComp from '@/app/components/GridItem/components/Nike';
 
 import { gridFilterStore } from '@/store/gridFilterStore'
 import { useEffect, useState } from 'react';

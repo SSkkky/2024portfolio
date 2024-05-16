@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 export default function About(){
     return(
         <article className="about" id="about">
+            <b>ABOUT ME :0</b>
             <motion.div
             className='me'
             initial={{opacity : 1}}
@@ -17,7 +18,7 @@ export default function About(){
                     delay: 0.05
                 }
             }}>
-                ㅇㅅㅇb
+                ㅇㅅㅇ
             </motion.div>
         </article>
     )
