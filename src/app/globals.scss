@@ -36,9 +36,33 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     background-color: #fff;
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 1115px;
+        height: 575px;
+        filter: blur(160px);
+        pointer-events: none;
+        box-sizing: border-box;
+    }
+
+    &::before {
+        opacity: .4;
+        left: -600px;
+        transform: rotate(144deg);
+        background: linear-gradient(270deg, #9643FF 38%, #43B0FF 50%, rgba(72, 184, 236, 0.9) 74%, rgba(116, 255, 67, 0) 120%);
+    }
+
+    &::after {
+        top: -500px;
+        left: 50%;
+        background: linear-gradient(270deg, #43B0FF 66%, rgba(116, 255, 67, 0) 120%);
+    }
 }
 
 @include responsive(m) {

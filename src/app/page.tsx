@@ -1,12 +1,14 @@
 import GridItem from './components/GridItem/GridItem'
-import MainHeader from './components/Header/Header'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 import './styles/main.scss'
 
 export default function Home() {
   return (
     <>
-      <MainHeader />
+      <Header />
       <GridItem />
+      <Footer/>
     </>
   );
 }
