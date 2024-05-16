@@ -105,6 +105,7 @@
     article {
         border-radius: 1rem;
         background: aliceblue;
+        position: relative;
         display: flex;
         min-width: calc((1200px - 5.5rem) / 4);
         min-height: 240px;
