@@ -1,7 +1,7 @@
 import '../styles/Movie.scss';
 import TagComp from './Tag';
 
-export default function movie(){
+export default function Movie(){
     return(
         <article className="movie" id="movie">
             <TagComp keyword={['PERSONAL', 'REACT']}/>

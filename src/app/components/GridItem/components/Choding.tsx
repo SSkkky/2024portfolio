@@ -4,7 +4,7 @@ import IphoneImg from '@/assets/iPhone15_w.png';
 import TagComp from './Tag';
 import '../styles/Choding.scss';
 
-export default function choding(){
+export default function Choding(){
     return(
         <article className="choding" id="choding">
             <TagComp keyword={['TEAM', 'NEXT.JS']}/>
