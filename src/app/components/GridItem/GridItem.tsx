@@ -1,38 +1,39 @@
 "use client"
-
+import data from '@/data/data.json';
 import IntroComp from '@/app/components/MainItem/Intro';
 import AboutComp from '@/app/components/GridItem/components/About';
-import HappypubComp from '@/app/components/GridItem/components/Happypub';
-import MovieComp from '@/app/components/GridItem/components/Movie';
-import ChodingComp from '@/app/components/GridItem/components/Choding';
-import MinchomapComp from '@/app/components/GridItem/components/Minchomap';
-import NikeComp from '@/app/components/GridItem/components/Nike';
 
+import dynamic from 'next/dynamic';
+import { useRouter } from 'next/navigation';
 import { gridFilterStore } from '@/store/gridFilterStore'
 import { useEffect, useState } from 'react';
+import './styles/GridItem.scss';
 
 export default function GridItem(){
+    let componentNames = [];
     const {filter} = gridFilterStore();
-    const [comp, setComp] = useState(<><IntroComp /><AboutComp/><NikeComp/><HappypubComp/><MovieComp/><ChodingComp /><MinchomapComp/></>);
+    const router = useRouter();
 
     useEffect(()=>{
-    switch (filter) {
-        case 'ALL':
-            setComp(<><IntroComp /><AboutComp/><NikeComp/><HappypubComp/><MovieComp/><ChodingComp /><MinchomapComp/></>)
-            break;
+    },[])
 
-        case 'PERSONAL':
-            setComp(<><AboutComp/><NikeComp/><MovieComp/><MinchomapComp/></>)
-            break;
-        
-        case 'TEAM' : setComp(<><HappypubComp/><ChodingComp/></>)
-            break;
-    }
+    useEffect(()=>{
     },[filter])
 
     return(
         <section className={`gridSection ` + filter}>
-            {comp}
+            <IntroComp/>
+            <AboutComp/>
+        {
+            data.map((item)=> {
+                const DynamicComponent = dynamic(() => import(`./components/${item.keyword}`), {
+                    loading: () => <div>Loading...</div>
+                });
+
+                return < DynamicComponent key={item.id} />
+            })
+        }
+
         </section>
     )
 }
