@@ -6,19 +6,11 @@ import AboutComp from '@/app/components/GridItem/components/About';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { gridFilterStore } from '@/store/gridFilterStore'
-import { useEffect, useState } from 'react';
 import './styles/GridItem.scss';
 
 export default function GridItem(){
-    let componentNames = [];
     const {filter} = gridFilterStore();
     const router = useRouter();
-
-    useEffect(()=>{
-    },[])
-
-    useEffect(()=>{
-    },[filter])
 
     return(
         <section className={`gridSection ` + filter}>
@@ -26,14 +18,12 @@ export default function GridItem(){
             <AboutComp/>
         {
             data.map((item)=> {
-                const DynamicComponent = dynamic(() => import(`./components/${item.keyword}`), {
-                    loading: () => <div>Loading...</div>
-                });
-
-                return < DynamicComponent key={item.id} />
+                const DynamicComponent = dynamic(() => import(`./components/${item.keyword}`));
+                return <article className={item.keyword} onClick={()=>{router.push(`/detail?id=${item.id}`)}} key={item.keyword}>
+                    <DynamicComponent key={item.id}/>
+                    </article>
             })
         }
-
         </section>
     )
 }

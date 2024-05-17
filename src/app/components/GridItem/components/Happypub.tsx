@@ -3,9 +3,9 @@ import BottleComp from './components/Bottle';
 
 export default function Happypub(){
     return(
-        <article className="happypub">
+        <section id="Happypub" className="Happypub">
             <TagComp keyword={['TEAM', 'HTML']}/>
             <BottleComp />
-        </article>
+        </section>
     )
 }

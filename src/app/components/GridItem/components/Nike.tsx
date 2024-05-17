@@ -22,8 +22,8 @@ export default function Nike(){
   };
 
   return (
-    <motion.article
-    className="nike" id="nike" 
+    <motion.section
+    id="Nike" className="Nike" 
     onHoverStart={handleHoverStart}
     onHoverEnd={handleHoverEnd}
     >
@@ -38,6 +38,6 @@ export default function Nike(){
             variants={variants}
             />
         </motion.svg>
-    </motion.article>
+    </motion.section>
   );
 }

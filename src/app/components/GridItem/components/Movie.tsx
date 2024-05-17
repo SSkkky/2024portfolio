@@ -3,9 +3,9 @@ import TagComp from './Tag';
 
 export default function Movie(){
     return(
-        <article className="movie" id="movie">
+        <section id="Movie" className="Movie">
             <TagComp keyword={['PERSONAL', 'REACT']}/>
             <h3>SFLIX</h3>
-        </article>
+        </section>
     )
 }

@@ -3,9 +3,9 @@ import TagComp from './Tag';
 
 export default function Minchomap(){
     return(
-        <article className="minchomap" id="minchomap">
+        <section id="Minchomap" className="Minchomap">
             <TagComp keyword={['PERSONAL', 'VUE']}/>
             민초맵
-            </article>
+        </section>
     )
 }

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About(){
     return(
-        <article className="about" id="about">
+        <section className="About" id="About">
             <b>ABOUT ME :0</b>
             <motion.div
             className='me'
@@ -20,6 +20,6 @@ export default function About(){
             }}>
                 ㅇㅅㅇ
             </motion.div>
-        </article>
+        </section>
     )
 }

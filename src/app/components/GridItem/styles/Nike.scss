@@ -1,4 +1,4 @@
-#nike {
+#Nike {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,5 +7,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-25%);
     }
 }
