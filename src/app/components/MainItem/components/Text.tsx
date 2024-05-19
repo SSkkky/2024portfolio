@@ -17,12 +17,7 @@ export default function Text() {
     return (
         <p className="titleText">
             안녕하세요<br></br>
-            <b>프론트엔드 개발자<br/>손하늘</b>입니다.
+            <b>WEB DEVELOPER<br/>손하늘</b>입니다.
         </p>
-        // <p className="titleText">
-        //     안녕하세요<br></br>
-        //     <b>프론트엔드 개발자
-        //     { resWidth ? ' ' : <br/>}손하늘</b>입니다.
-        // </p>
     )
 }
