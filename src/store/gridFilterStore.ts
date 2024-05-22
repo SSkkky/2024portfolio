@@ -1,11 +1,11 @@
 import create from 'zustand';
 
 interface gridFilterStore {
-    filter: string;
+    clickedFilter: string;
     setFilter: (filter: string) => void;
 }
 
 export const gridFilterStore = create<gridFilterStore>((set) => ({
-    filter: 'ALL',
-    setFilter: (filter) => set({ filter })
+    clickedFilter: 'ALL',
+    setFilter: (clickedFilter) => set({ clickedFilter })
 }));
