@@ -12,7 +12,7 @@ export default function Choding(){
     }
     
     return(
-        <section className="choding" id="Choding" onClick={onClickHandler}>
+        <section id="Choding" onClick={onClickHandler}>
             <div className='title'>
                 <b>초딩</b>
                 <span>초보들의 코딩공부</span>

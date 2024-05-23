@@ -23,7 +23,7 @@ export default function Nike(){
 
   return (
     <motion.section
-    id="Nike" className="Nike" 
+    id="Nike"
     onHoverStart={handleHoverStart}
     onHoverEnd={handleHoverEnd}
     >

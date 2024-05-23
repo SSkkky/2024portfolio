@@ -6,22 +6,28 @@
 
 .gridSection {
     max-width: 1200px;
+    min-height: calc(100vh - 16rem - 35px);
     transition: 0.3s ease-in-out;
     padding: 0 2rem;
+    margin: 8rem 0;
     display: grid;
     gap: 0.5rem;
-    margin-top: 8rem;
 
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
 
-    // $list : Self, skill, Nike, Happypub, Movie, Choding, Minchomap;
+    article {
+        border-radius: 1rem;
+        background: aliceblue;
+        position: relative;
+        display: flex;
+        min-width: calc((1200px - 5.5rem) / 4);
+        min-height: 240px;
+        cursor: pointer;
+        overflow: hidden;
 
-    // @each $item in $list {
-    //     .#{$item} {
-    //         grid-area: #{$item};
-    //     }
-    // }
+        box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.05);
+    }
 
     &.ALL {
         .Self {
@@ -62,19 +68,14 @@
 
     &.PERSONAL {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-
-        .About {
-            grid-column: 1 / 3;
-            grid-row: 2 / 2;
-        }
+        grid-template-rows: repeat(4, 1fr);
 
         .Nike {
             grid-column: 2 / 3;
             grid-row: 1 / 2;
         }
 
-        #Movie {
+        .Movie {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
         }
@@ -87,7 +88,7 @@
 
     &.TEAM {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
 
         .Happypub {
             display: block;
@@ -100,19 +101,6 @@
             grid-column: 3 / 3;
             grid-row: 1 / 3;
         }
-    }
-
-    article {
-        border-radius: 1rem;
-        background: aliceblue;
-        position: relative;
-        display: flex;
-        min-width: calc((1200px - 5.5rem) / 4);
-        min-height: 240px;
-        cursor: pointer;
-        overflow: hidden;
-
-        box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.05);
     }
 }
 

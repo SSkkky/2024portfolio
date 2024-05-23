@@ -48,8 +48,7 @@ export default function GridItem(){
 
     return(
         <section className={`gridSection ` + clickedFilter}>
-            <IntroComp/>
-            <AboutComp/>
+        { clickedFilter === 'ALL' ? <><IntroComp/><AboutComp/></> : null }
         {
             selectedData && selectedData.map((item)=> {
                 const DynamicComponent = dynamic(() => import(`./components/${item.keyword}`));
