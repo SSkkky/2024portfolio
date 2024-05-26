@@ -2,8 +2,8 @@
 import data from '@/data/data.json';
 import { ListType } from '@/types/dataTypes';
 import { useSearchParams } from 'next/navigation';
-import { Suspense } from 'react'
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
+import MainComp from './components/Main';
 
 export default function Detail (){
     const [detailData, setDetailData] = useState<ListType>();
@@ -17,11 +17,7 @@ export default function Detail (){
 
     return(
         <Suspense fallback={<p>로딩중...</p>}>
-            {
-                detailData && <main>
-                    <p>{detailData.name}의 디테일 페이지입니당</p>
-                </main>
-            }
+            <MainComp detailData={detailData}/>
         </Suspense>
     )
 }
