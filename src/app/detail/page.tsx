@@ -4,6 +4,7 @@ import { ListType } from '@/types/dataTypes';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react'
 import { useEffect, useState } from 'react';
+import Loading from './loading';
 
 export default function Detail (){
     const [detailData, setDetailData] = useState<ListType>();
@@ -16,12 +17,12 @@ export default function Detail (){
     },[id])
 
     return(
-        <Suspense>
-        {
-            detailData
-            ? <main><p>{detailData.name}의 디테일 페이지입니당</p></main>
-            : <>로딩중입니다</>
-        }
+        <Suspense fallback={<p>로딩중...</p>}>
+            {
+                detailData && <main>
+                    <p>{detailData.name}의 디테일 페이지입니당</p>
+                </main>
+            }
         </Suspense>
     )
 }
