@@ -4,7 +4,6 @@ import { ListType } from '@/types/dataTypes';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react'
 import { useEffect, useState } from 'react';
-import Loading from './loading';
 
 export default function Detail (){
     const [detailData, setDetailData] = useState<ListType>();
