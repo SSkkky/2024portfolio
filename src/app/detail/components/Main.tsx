@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link';
 import { ListType } from '@/types/dataTypes';
 import '../styles/Main.scss';
 
@@ -17,12 +18,12 @@ export function MainComp ({detailData} : MainType){
     }
 
     return (
-        <main id='DetailMain'>
+        <main id='DetailMain' style={{backgroundImage : detailData?.imageurl}}>
             <article className='overview'>
                 <b>{detailData?.name}</b>
                 <p>{detailData?.dateteam}</p>
-                <button onClick={()=>{onClickDetailBtn('github')}}>깃헙</button>
-                <button onClick={()=>{onClickDetailBtn('deploy')}}>배포</button>
+                <a href={detailData?.link} target='_blank' rel="noopener noreferrer">깃헙</a>
+                <a href={detailData?.deployurl} target='_blank' rel="noopener noreferrer">배포</a>
             </article>
         </main>
     )
