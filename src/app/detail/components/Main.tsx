@@ -1,6 +1,8 @@
 "use client"
 
 import Link from 'next/link';
+import Image from 'next/image';
+import IphoneImg from '@/assets/iPhone15_w.png';
 import { ListType } from '@/types/dataTypes';
 import '../styles/Main.scss';
 
@@ -28,9 +30,20 @@ export function MainComp ({detailData} : MainType){
                 <b>{detailData?.name}</b>
                 <p>{detailData?.dateteam}</p>
                 <p>{detailData?.skill[0].skills}</p>
-                <a href={detailData?.link} target='_blank' rel="noopener noreferrer">깃헙</a>
-                <a href={detailData?.deployurl} target='_blank' rel="noopener noreferrer">배포</a>
+                <ul className='links'>
+                    <li>
+                        <a href={detailData?.link} target='_blank' rel="noopener noreferrer">깃헙</a>
+                    </li>
+                    <li>
+                        <a href={detailData?.deployurl} target='_blank' rel="noopener noreferrer">배포</a>
+                    </li>
+                </ul>
             </article>
+            <Image
+            src={IphoneImg}
+            width={256}
+            height={527}
+            alt="휴대폰 목업" />
         </main>
     )
 }
