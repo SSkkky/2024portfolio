@@ -17,11 +17,17 @@ export function MainComp ({detailData} : MainType){
         : console.log('배포버튼클릭');
     }
 
+    const mainStyle = {
+        backgroundImage : `url(${detailData?.imageurl})`
+    }
+
     return (
-        <main id='DetailMain' style={{backgroundImage : detailData?.imageurl}}>
+        <main id='DetailMain'>
             <article className='overview'>
+                <p>{detailData?.subTitle}</p>
                 <b>{detailData?.name}</b>
                 <p>{detailData?.dateteam}</p>
+                <p>{detailData?.skill[0].skills}</p>
                 <a href={detailData?.link} target='_blank' rel="noopener noreferrer">깃헙</a>
                 <a href={detailData?.deployurl} target='_blank' rel="noopener noreferrer">배포</a>
             </article>

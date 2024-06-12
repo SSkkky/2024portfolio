@@ -1,5 +1,6 @@
 export interface ListType {
     "id": number,
+    "subTitle" : string,
     "cate" : string,
     "name": string,
     "keyword": string,

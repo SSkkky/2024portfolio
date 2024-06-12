@@ -2,7 +2,8 @@
     {
         "id": 0,
         "cate" : "PERSONAL",
-        "name": "나이키 클론",
+        "subTitle" : "기본을 충실히",
+        "name": "나이키우먼",
         "keyword": "Nike",
         "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FnikeThumb.png?alt=media&token=90996bd1-24a0-491c-ba49-c20d4ac88867",
         "deployurl": "https://sskkky.github.io/NIKE-WOMAN/",
@@ -65,6 +66,7 @@
     {
         "id": 1,
         "cate" : "TEAM",
+        "subTitle" : "주류 큐레이션 쇼핑몰",
         "name": "해피펍",
         "keyword": "Happypub",
         "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FhappyThumb.png?alt=media&token=89eac2e5-fcc0-40d2-ac46-c767c4fcb8a5",
@@ -166,6 +168,7 @@
     {
         "id": 2,
         "cate" : "PERSONAL",
+        "subTitle" : "실시간 박스오피스가 궁금하다면?",
         "name": "SFLIX",
         "keyword": "Movie",
         "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FsflixThumb.png?alt=media&token=11b604d6-e8e2-4e4b-824e-ec05661798bb",
@@ -180,9 +183,6 @@
             },
             {
                 "goal": "React 컴포넌트 설계 및 Route 응용"
-            },
-            {
-                "goal": "로컬스토리지 데이터 저장"
             },
             {
                 "goal": "전역 상태 관리"
@@ -235,6 +235,7 @@
     {
         "id": 3,
         "cate" : "TEAM",
+        "subTitle" : "초보들의 코딩 공부",
         "name": "초딩",
         "keyword": "Choding",
         "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2Fchoding.png?alt=media&token=156b58df-1f96-48cd-b3c3-eb24b667fc2d",
@@ -320,6 +321,7 @@
     {
         "id": 4,
         "cate" : "PERSONAL",
+        "subTitle" : "내 주변 민트초코 맛집은?",
         "name": "민초맵",
         "keyword": "Minchomap",
         "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FminchomapThumb.png?alt=media&token=1c853688-91e2-4b57-b431-d3b7fcf9607d",
