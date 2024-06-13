@@ -8,7 +8,6 @@ type MainType = {
     detailData : ListType | undefined
 }
 export function IntroComp ({detailData} : MainType){
-    console.log(detailData?.overview)
     return (
         <main id='DetailIntro' style={{whiteSpace: 'pre-line'}}>
             {detailData?.overview}

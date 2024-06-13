@@ -10,9 +10,6 @@ type MainType = {
     detailData : ListType | undefined
 }
 export function MainComp ({detailData} : MainType){
-    console.log('----------------detailData')
-    console.log(detailData)
-
     const onClickDetailBtn = (type : string) => {
         type === 'github'
         ? console.log('깃헙버튼클릭')
@@ -29,7 +26,14 @@ export function MainComp ({detailData} : MainType){
                 <p>{detailData?.subTitle}</p>
                 <b>{detailData?.name}</b>
                 <p>{detailData?.dateteam}</p>
-                <p>{detailData?.skill[0].skills}</p>
+                <b>사용기술</b>
+                <ul>
+                    {
+                        detailData?.skill.map((item, i) => (
+                            <li key={i}>{item.skills}</li>
+                        ))
+                    }
+                </ul>
                 <ul className='links'>
                     <li>
                         <a href={detailData?.link} target='_blank' rel="noopener noreferrer">깃헙</a>

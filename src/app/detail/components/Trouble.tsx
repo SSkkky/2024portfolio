@@ -7,7 +7,19 @@ type MainType = {
 export function TroubleComp ({detailData} : MainType){
     return (
         <main id='DetailTrouble'>
-            {detailData && <p>{detailData.name}의 트러블 슈팅 페이지입니당</p>}
+            <b>TROUBLE</b>
+            <ul>
+                {
+                    detailData?.trouble.map((item, i) => (
+                        <li key={i}>
+                            <b>{item.title}</b>
+                            <p>{item.problem}</p>
+                            <p>{item.reason}</p>
+                            <p>{item.solve}</p>
+                        </li>
+                    ))
+                }
+            </ul>
         </main>
     )
 }

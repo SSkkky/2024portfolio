@@ -13,10 +13,10 @@ export default function Choding(){
     
     return(
         <section id="Choding" onClick={onClickHandler}>
-            <div className='title'>
+            {/* <div className='title'>
                 <b>초딩</b>
                 <span>초보들의 코딩공부</span>
-            </div>
+            </div> */}
             <TagComp keyword={['TEAM', 'NEXT.JS']} />
             <Image src={IphoneImg} alt="아이폰" width={256} height={527} className='iphone'/>
         </section>
