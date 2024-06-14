@@ -8,7 +8,9 @@ export function ReviewComp ({detailData} : MainType){
     return (
         <main id='DetailReview'>
             <b>REVIEW</b>
-            <p>{detailData?.review}</p>
+            <section className='contents'>
+                <p>{detailData?.review}</p>
+            </section>
         </main>
     )
 }

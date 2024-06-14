@@ -3,4 +3,33 @@
     height: 100vh;
     background-color: #000;
     color: #fff;
+
+    .contents {
+        .subTitle {
+            font-size: 2rem;
+        }
+
+        .name {
+            font-size: 4rem;
+        }
+
+        .dateteam {
+            padding-top: 2rem;
+        }
+
+        .skills,
+        .links {
+            padding-top: 4rem;
+
+            ul {
+                padding-top: 4px;
+            }
+        }
+    }
+
+    .phone {
+        position: absolute;
+        right: 10%;
+        top: 25%;
+    }
 }

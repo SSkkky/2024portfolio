@@ -1,8 +1,12 @@
 .detail {
     width: 100%;
-    background-color: aquamarine;
 
     main {
-        padding: 2rem;
+        box-sizing: border-box;
+        padding: 8rem;
+
+        .contents {
+            padding-top: 1rem;
+        }
     }
 }

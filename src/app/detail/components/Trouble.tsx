@@ -8,7 +8,8 @@ export function TroubleComp ({detailData} : MainType){
     return (
         <main id='DetailTrouble'>
             <b>TROUBLE</b>
-            <ul>
+            <section className='contents'>
+                <ul>
                 {
                     detailData?.trouble.map((item, i) => (
                         <li key={i}>
@@ -19,7 +20,8 @@ export function TroubleComp ({detailData} : MainType){
                         </li>
                     ))
                 }
-            </ul>
+                </ul>
+            </section>
         </main>
     )
 }

@@ -1,0 +1,61 @@
+#DetailGoal {
+    background-color: aliceblue;
+    padding-bottom: 12rem;
+
+    .contents {
+        padding-top: 5rem;
+
+        ul {
+            display: flex;
+            gap: 3.5rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            li {
+                position: relative;
+
+                p {
+                    width: 120px;
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                    text-align: center;
+                    margin-top: 2rem;
+                }
+
+                &::before {
+                    content: "";
+                    top: calc((100% - 200px)/2 + 1rem);
+                    left: calc((100% - 200px)/2);
+                    position: absolute;
+                    border: 1px solid #000;
+                    border-radius: 100%;
+                    width: 200px;
+                    height: 200px;
+                    z-index: 0;
+                }
+            }
+
+            li:last-child {
+                background-color: aqua;
+                border-radius: 100%;
+                width: 200px;
+                height: 200px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 2rem;
+
+                p {
+                    margin: 0;
+                }
+
+                &::before {
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
+    }
+}

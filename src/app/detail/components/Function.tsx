@@ -9,11 +9,13 @@ export function FunctionComp ({detailData} : MainType){
     return (
         <main id='DetailFunction'>
             <b>FUNCTION</b>
-            <ul>
+            <section className='contents'>
+                <ul>
                 {
                     detailData?.function.map((item, i) => ( <li key={i}>{item.fn}</li> ))
                 }
-            </ul>
+                </ul>
+            </section>
         </main>
     )
 }

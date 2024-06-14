@@ -1,7 +1,7 @@
 import data from '@/data/data.json';
 import { MainComp } from './components/Main';
-import { IntroComp } from './components/Intro';
-import { FeatureComp } from './components/Feature';
+import { OverviewComp } from './components/Overview';
+import { GoalComp } from './components/Goal';
 import { FunctionComp } from './components/Function';
 import { ReviewComp } from './components/Review';
 import { TroubleComp } from './components/Trouble';
@@ -13,8 +13,8 @@ export default async function DetailPage({ searchParams }: { searchParams: { id:
 
   return <section className='detail'>
     <MainComp detailData={detailData} />
-    <IntroComp detailData={detailData} />  
-    <FeatureComp detailData={detailData} />  
+    <OverviewComp detailData={detailData} />  
+    <GoalComp detailData={detailData} />  
     <FunctionComp detailData={detailData} />  
     <TroubleComp detailData={detailData} />  
     <ReviewComp detailData={detailData} />  
