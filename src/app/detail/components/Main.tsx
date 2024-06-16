@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import IphoneImg from '@/assets/iPhone15_w.png';
+import ImacImg from '@/assets/ImacMockup.png';
 import { ListType } from '@/types/dataTypes';
 import '../styles/Main.scss';
 
@@ -40,12 +41,18 @@ export function MainComp ({detailData} : MainType){
                 </ul>
                 </section>
             </section>
-            <Image
+            {/* <Image
             src={IphoneImg}
             width={256}
                 height={527}
                 className='phone'
-            alt="휴대폰 목업" />
+            alt="휴대폰 목업" /> */}
+            <Image
+            src={ImacImg}
+            width={1200}
+                height={970}
+                className='pc'
+            alt="PC 목업" />
         </main>
     )
 }
