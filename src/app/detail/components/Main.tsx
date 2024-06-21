@@ -47,12 +47,12 @@ export function MainComp ({detailData} : MainType){
                 height={527}
                 className='phone'
             alt="휴대폰 목업" /> */}
-            <Image
+            {/* <Image
             src={ImacImg}
             width={1200}
                 height={970}
                 className='pc'
-            alt="PC 목업" />
+            alt="PC 목업" /> */}
         </main>
     )
 }
